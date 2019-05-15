@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurrentBalance.InputPage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="0,0,0,40"
+            VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"  >
+            <Label HorizontalTextAlignment="Center" FontSize="40" Margin="0,0,0,20" Text="{Binding Text}" ></Label>
+            <Entry x:Name="entryAmount" Text="{Binding Amount}"  Placeholder="Amount" Keyboard="Numeric"></Entry>
+            <Button x:Name="okButton" Command="{Binding OkButtonCommand}" CommandParameter="{Binding Text}" Text="Ok"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
